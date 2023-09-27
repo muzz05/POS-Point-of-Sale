@@ -1,0 +1,14 @@
+.Links-of-sidebar {
+  text-decoration: none;
+  font-size: 17px;
+  padding: 2px 5px;
+}
+
+/* *********HomePage Styling************* */
+
+.category-box:hover {
+  background-color: rgb(250, 250, 250);
+}
+.category-box-active {
+  background-color: rgb(240, 240, 240);
+}
