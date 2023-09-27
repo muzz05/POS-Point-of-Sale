@@ -1,44 +1,43 @@
 const itemData = [
   {
-    name: "Tea",
-    price: 1,
-    category: "Drinks",
+    name: "Zinger Burger",
+    price: 3,
+    category: "Burgers",
     image:
-      "https://img.etimg.com/photo/msid-69212931,quality-100/chai-itself-was-once-a-trend-that-developed-this-way-.jpg",
+      "https://mlwlg6cbmaj2.i.optimole.com/w:auto/h:auto/q:mauto/f:avif/https://foodstudioofficial.com/wp-content/uploads/2022/12/82.jpg",
   },
   {
-    name: "coffee",
-    price: 2,
+    name: "Coffee",
+    price: 1.8,
     category: "Drinks",
     image:
       "https://static.vecteezy.com/system/resources/thumbnails/025/282/026/small/stock-of-mix-a-cup-coffee-latte-more-motive-top-view-foodgraphy-generative-ai-photo.jpg",
   },
   {
-    name: "Chicken Biryani",
-    price: 10,
-    category: "Rice",
+    name: "Patti Burger",
+    price: 2.5,
+    category: "Burgers",
     image:
-      "https://www.licious.in/blog/wp-content/uploads/2020/12/Hyderabadi-chicken-Biryani.jpg",
+      "https://openmenupk.s3.ap-south-1.amazonaws.com/wp-content/uploads/2022/11/28063948/petti-burger.jpg",
   },
   {
-    name: "Veg Biryani",
-    price: 5,
-    category: "Rice",
+    name: "Broast",
+    price: 4,
+    category: "Broast",
     image:
-      "https://www.indianveggiedelight.com/wp-content/uploads/2020/04/veg-biryani-instant-pot-featured.jpg",
+      "https://angeethibbqandfastfood.businesswala.pk/assets/uploads/34c0375476d27e1a5a81fe4d864953f2.png",
   },
   {
-    name: "Chicken Hakka",
-    price: 7,
-    category: "Noodles",
-    image: "https://cravecookclick.com/wp-content/uploads/2012/07/IMG_4400.jpg",
+    name: "Cold Drink",
+    price: 1,
+    category: "Drinks",
+    image: "https://newspakistan.tv/wp-content/uploads/2018/02/cold-drink.jpg",
   },
   {
-    name: "Eggy",
-    price: 5,
-    category: "Noodles",
-    image:
-      "https://www.licious.in/blog/wp-content/uploads/2020/12/Egg-Noodles-min.jpg",
+    name: "Fries",
+    price: 1.5,
+    category: "Fries",
+    image: "https://static.toiimg.com/photo/54659021.cms",
   },
 ];
 module.exports = itemData;

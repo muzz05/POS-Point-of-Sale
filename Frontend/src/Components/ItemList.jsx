@@ -24,7 +24,7 @@ const ItemList = ({ item }) => {
           <Meta title={item.name} />
           <div className="mt-4">
             <button
-              className="btn btn-secondary w-100"
+              className="btn btn-secondary w-100 btn-sm"
               onClick={() => {
                 handleUpdateCart();
               }}

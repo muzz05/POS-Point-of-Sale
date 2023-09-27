@@ -203,7 +203,7 @@ const CartPage = () => {
           </div>
         </Form>
         <div className="d-flex align-items-center justify-content-end">
-          {subTotal > 1500 ? (
+          {subTotal > 10 ? (
             <button
               className="btn btn-success"
               onClick={() => {

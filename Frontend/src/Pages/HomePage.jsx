@@ -15,17 +15,22 @@ const HomePage = () => {
     {
       name: "Drinks",
       image:
-        "https://hips.hearstapps.com/hmg-prod/images/apple-cider-spritz1-1663882620.jpg?crop=0.668xw:1.00xh;0.167xw,0&resize=640:*",
+        "https://hips.hearstapps.com/hmg-prod/images/delish-210525-peachmargarita-10-landscape-jg-1623188075.jpg",
     },
     {
-      name: "Rice",
+      name: "Fries",
       image:
-        "https://static01.nyt.com/images/2023/02/25/multimedia/Sushi-Rice-lcfv/Sushi-Rice-lcfv-mediumSquareAt3X.jpg",
+        "https://www.corriecooks.com/wp-content/uploads/2021/05/french-fries-instant-pot.jpg",
     },
     {
-      name: "Noodles",
+      name: "Burgers",
       image:
-        "https://www.whiskaffair.com/wp-content/uploads/2021/04/Cantonese-Pan-Fried-Noodles-2-3.jpg",
+        "https://www.tastingtable.com/img/gallery/what-makes-restaurant-burgers-taste-different-from-homemade-burgers-upgrade/l-intro-1662064407.jpg",
+    },
+    {
+      name: "Broast",
+      image:
+        "https://savyour.com.pk/products/wp-content/uploads/2023/01/karachi-broast-banner.jpg",
     },
   ];
 
@@ -52,14 +57,20 @@ const HomePage = () => {
   }, []);
   return (
     <DefaultLayout>
-      <div className="d-flex justify-content-center align-items-center my-3">
+      <div
+        className="d-flex justify-content-center align-items-center my-3"
+        style={{ overflowX: "auto" }}
+      >
         {categories.map((category) => {
           return (
             <div
               className={`d-flex jusitfy-content-center align-items-center flex-column m-3 border p-3 category-box ${
                 selectedCategory === category.name && "category-box-active"
               }`}
-              style={{ borderRadius: "10px", cursor: "pointer" }}
+              style={{
+                borderRadius: "10px",
+                cursor: "pointer",
+              }}
               onClick={() => {
                 setSelectedCategory(category.name);
               }}

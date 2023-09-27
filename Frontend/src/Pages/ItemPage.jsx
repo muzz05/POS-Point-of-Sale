@@ -143,8 +143,9 @@ const ItemPage = () => {
                 <Select
                   options={[
                     { value: "Drinks", label: "Drinks" },
-                    { value: "Rice", label: "Rice" },
-                    { value: "Noodles", label: "Noodles" },
+                    { value: "Burgers", label: "Burgers" },
+                    { value: "Fries", label: "Burgers" },
+                    { value: "Broast", label: "Broast" },
                   ]}
                 />
               </Form.Item>
