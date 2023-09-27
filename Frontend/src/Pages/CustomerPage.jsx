@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import DefaultLayout from "../Components/DefaultLayout";
 import {
   IdcardOutlined,
@@ -8,6 +8,7 @@ import {
 import axios from "axios";
 import { Form, Input, Modal, Table } from "antd";
 import LoyaltyCard from "../Components/LoyaltyCard";
+import { useReactToPrint } from "react-to-print";
 
 const CustomerPage = () => {
   // States
@@ -16,6 +17,7 @@ const CustomerPage = () => {
   const [editPopup, setEditPopup] = useState(false);
   const [selectedLoyaltyCard, setSelectedLoyaltyCard] = useState(null);
   const [loyaltyCardPopup, setLoyaltyCardPopup] = useState(false);
+  const componentRef = useRef();
 
   // This is to get All the customers
   const getAllCustomers = async () => {
@@ -89,11 +91,17 @@ const CustomerPage = () => {
       ),
     },
   ];
+
+  // This is to Print the Invoice
+  const handlePrint = useReactToPrint({
+    content: () => componentRef.current,
+  });
+
   return (
     <DefaultLayout>
-      <h1 className="text-center my-3">Customers Page</h1>
+      <h1 className="text-center my-4">Customers Page</h1>
       <Table
-        className="my-3"
+        className="my-4"
         columns={columns}
         dataSource={customers}
         pagination={false}
@@ -130,10 +138,18 @@ const CustomerPage = () => {
           setLoyaltyCardPopup(false);
         }}
         footer={false}
-        title={<h1>Loyalty Card</h1>}
+        title={<h1 className="text-center my-4">Loyalty Card</h1>}
       >
-        <div className="d-flex align-items-center justify-content-center my-4">
+        <div
+          className="d-flex align-items-center justify-content-center my-4"
+          ref={componentRef}
+        >
           <LoyaltyCard customer={selectedLoyaltyCard} />
+        </div>
+        <div className="d-flex align-items-center justify-content-end my-2">
+          <button className="btn btn-primary" onClick={handlePrint}>
+            Print
+          </button>
         </div>
       </Modal>
     </DefaultLayout>

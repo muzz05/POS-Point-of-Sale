@@ -1,7 +1,7 @@
 import React, { forwardRef } from "react";
 import CodeWithMuzz from "../Images/Code with Muzz-logos.jpeg";
 
-const Invoice = forwardRef((props, ref) => {
+const Invoice = (props) => {
   const { bill } = props;
   return (
     <div
@@ -10,7 +10,6 @@ const Invoice = forwardRef((props, ref) => {
         boxShadow:
           "0 3px 7px 0 rgba(0, 0, 0, 0.2), 0 5px 19px 0 rgba(0, 0, 0, 0.19)",
       }}
-      ref={ref}
     >
       <div className="d-flex justify-content-center align-items-center flex-column">
         <img
@@ -76,6 +75,6 @@ const Invoice = forwardRef((props, ref) => {
       </p>
     </div>
   );
-});
+};
 
 export default Invoice;

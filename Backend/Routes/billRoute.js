@@ -33,4 +33,21 @@ router.get("/get-all", async (req, res) => {
   }
 });
 
+// Route 3: This is to Delete a Bill / METHOD: DELETE
+router.delete("/delete-bill/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const bills = await Bill.findByIdAndDelete(id);
+    res.status(200).send({
+      success: true,
+      message: "Bill Has Been Deleted Successfully",
+      bills,
+    });
+  } catch (error) {
+    res
+      .status(500)
+      .send({ success: false, message: "Some Error Occured in the Server" });
+  }
+});
+
 module.exports = router;

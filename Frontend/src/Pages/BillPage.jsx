@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import DefaultLayout from "../Components/DefaultLayout";
 import { Modal, Table } from "antd";
-import { EyeOutlined } from "@ant-design/icons";
+import { EyeOutlined, DeleteOutlined } from "@ant-design/icons";
 import axios from "axios";
 import Invoice from "../Components/Invoice";
 import { useReactToPrint } from "react-to-print";
@@ -21,6 +21,16 @@ const BillPage = () => {
     }
   };
 
+  // This is to delete the Bill
+  const handleDeleteBill = async (record) => {
+    const { data } = await axios.delete(
+      `http://localhost:4000/api/bill/delete-bill/${record._id}`
+    );
+    if (data.success) {
+      getAllBills();
+    }
+  };
+
   // This is The Column to show the Table data
   const columns = [
     { title: "ID", dataIndex: "_id" },
@@ -33,12 +43,21 @@ const BillPage = () => {
       title: "",
       dataIndex: "_id",
       render: (id, record) => (
-        <EyeOutlined
-          onClick={() => {
-            setInvoicePopup(true);
-            setSelectedBill(record);
-          }}
-        />
+        <>
+          <EyeOutlined
+            onClick={() => {
+              setInvoicePopup(true);
+              setSelectedBill(record);
+            }}
+            className="m-2"
+          />
+          <DeleteOutlined
+            onClick={() => {
+              handleDeleteBill(record);
+            }}
+            className="m-2"
+          />
+        </>
       ),
     },
   ];
@@ -66,8 +85,8 @@ const BillPage = () => {
           setInvoicePopup(false);
         }}
       >
-        <div className="container my-3">
-          <Invoice bill={selectedBill} ref={componentRef} />
+        <div className="container my-3" ref={componentRef}>
+          <Invoice bill={selectedBill} />
         </div>
         <div className="d-flex align-items-center justify-content-end">
           <button className="btn btn-primary" onClick={handlePrint}>
