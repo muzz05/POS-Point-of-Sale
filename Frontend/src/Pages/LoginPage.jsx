@@ -50,7 +50,7 @@ const LoginPage = () => {
             Login
           </h1>
           <Form className="mt-4" size="large" onFinish={handleLogin}>
-            <Form.Item name="userId" label="UserId">
+            <Form.Item name="cashierId" label="Cashier Id">
               <Input />
             </Form.Item>
             <Form.Item name="password" label="Password">

@@ -6,7 +6,7 @@ const userSchema = mongoose.Schema(
       type: String,
       required: true,
     },
-    userId: {
+    cashierId: {
       type: String,
       required: true,
     },

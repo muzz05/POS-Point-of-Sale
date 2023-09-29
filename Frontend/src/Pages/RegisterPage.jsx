@@ -53,7 +53,7 @@ const RegisterPage = () => {
             <Form.Item name="name" label=" Full Name">
               <Input />
             </Form.Item>
-            <Form.Item name="userId" label="UserId">
+            <Form.Item name="cashierId" label="Cashier Id">
               <Input />
             </Form.Item>
             <Form.Item name="password" label="Password">
