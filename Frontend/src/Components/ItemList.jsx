@@ -43,7 +43,13 @@ const ItemList = ({ item }) => {
       <div>
         <Card
           hoverable
-          cover={<img alt="example" src={item.image} />}
+          cover={
+            <img
+              alt="example"
+              src={item.image}
+              className="items-image-responsive"
+            />
+          }
           style={{ margin: "10px" }}
         >
           <Meta title={item.name} />

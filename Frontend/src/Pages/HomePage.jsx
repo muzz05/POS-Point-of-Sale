@@ -58,7 +58,7 @@ const HomePage = () => {
   return (
     <DefaultLayout>
       <div
-        className="d-flex justify-content-center align-items-center my-3"
+        className="d-flex align-items-center my-3"
         style={{ overflowX: "auto" }}
       >
         {categories.map((category) => {
@@ -109,7 +109,8 @@ const HomePage = () => {
                 xs={24}
                 sm={12}
                 md={8}
-                lg={4}
+                lg={6}
+                xl={4}
                 key={`home-page-item-list-${item._id}`}
               >
                 <ItemList item={item} />
