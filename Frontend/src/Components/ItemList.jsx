@@ -53,9 +53,10 @@ const ItemList = ({ item }) => {
           style={{ margin: "10px" }}
         >
           <Meta title={item.name} />
-          <div className="mt-4">
+          <div className="my-2">
+            <h5 className="my-2 text-dark">${item.price}</h5>
             <button
-              className="btn btn-secondary w-100 btn-sm"
+              className="btn btn-secondary w-100 btn-sm my-2"
               onClick={() => {
                 handleUpdateCart();
               }}
