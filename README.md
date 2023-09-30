@@ -26,8 +26,6 @@ You have to take care of come key issues before running the code. You should hav
 ![Screenshot 2023-09-30 154701](https://github.com/muzz05/POS-Point-of-Sale-/assets/142844170/e9f2a83d-b85c-4c7c-a660-810c16e3e341)
 ![Screenshot 2023-09-30 154714](https://github.com/muzz05/POS-Point-of-Sale-/assets/142844170/25f269b7-7c7a-4b89-99d6-0b90fa4302c1)
 ![Screenshot 2023-09-30 154725](https://github.com/muzz05/POS-Point-of-Sale-/assets/142844170/4f40e6f9-e4af-4221-9921-420ac8fa0521)
-
-This Website is also Completely Responsive
 ![Screenshot 2023-09-30 154820](https://github.com/muzz05/POS-Point-of-Sale-/assets/142844170/14e0877f-e454-472c-a994-7b9d705f8dc8)
 
 
