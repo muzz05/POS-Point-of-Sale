@@ -1,6 +1,7 @@
 # POS-Point-of-Sale-
 This is a Fully Functional POS Application Based On The MERN Stack
 
+![Under Development](https://img.shields.io/badge/Status-Complete-brightgreen)
 
 ## Features
 
